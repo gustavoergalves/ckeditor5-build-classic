@@ -28,6 +28,8 @@ import FontSize from '@ckeditor/ckeditor5-font/src/fontsize';
 import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
 import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor';
 import ImageViaUrl from '@ckeditor/ckeditor5-image-via-url/src/imageviaurlembed';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
@@ -59,6 +61,7 @@ ClassicEditor.builtinPlugins = [
 	FontColor,
 	FontBackgroundColor,
 	ImageViaUrl,
+	Alignment
 ];
 
 // Editor configuration.
@@ -73,17 +76,18 @@ ClassicEditor.defaultConfig = {
 			'fontsize',
 			'fontcolor',
 			'fontbackgroundcolor',
+			'alignment:left',
+			'alignment:right',
+			'alignment:center',
+			'alignment:justify',
+			'blockQuote',
 			'link',
-			'bulletedList',
-			'numberedList',
-			'|',
-			'indent',
-			'outdent',
 			'|',
 			'imageViaUrlEmbed',
-			'blockQuote',
-			'insertTable',
 			'mediaEmbed',
+			'|',
+			'bulletedList',
+			'numberedList',
 			'undo',
 			'redo'
 		]
@@ -99,13 +103,6 @@ ClassicEditor.defaultConfig = {
 
 			// This represents an image aligned to the right.
 			'alignRight'
-		]
-	},
-	table: {
-		contentToolbar: [
-			'tableColumn',
-			'tableRow',
-			'mergeTableCells'
 		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
