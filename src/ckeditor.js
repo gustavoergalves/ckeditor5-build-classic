@@ -79,7 +79,6 @@ ClassicEditor.defaultConfig = {
 			'alignment:justify',
 			'link',
 			'|',
-			'insertTable',
 			'imageViaUrlEmbed',
 			'mediaEmbed',
 			'|',
